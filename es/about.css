@@ -1,0 +1,169 @@
+@charset "UTF-8";
+@font-face {
+  font-family: pretendard-semiBold;
+  src: url(../font/woff2/Pretendard-SemiBold.woff2);
+}
+@font-face {
+  font-family: pretendard-mideum;
+  src: url(../font/woff2/Pretendard-Medium.woff2);
+}
+body {
+  margin: 0px;
+  background-color: #edece9;
+  color: #1e1913;
+  font-family: pretendard-mideum;
+  position: relative;
+}
+
+main {
+  margin: 160px;
+}
+main p {
+  line-height: 180%;
+}
+
+h4,
+h3 {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/*네비바*/
+nav {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  font-family: pretendard-mideum;
+  font-size: 13px;
+  margin-bottom: 40px;
+}
+nav a {
+  text-decoration: none;
+  color: #1e1913;
+}
+
+.about {
+  margin-right: 40px;
+}
+
+.nav-logo {
+  width: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*main-section1*/
+.about-main .about-img {
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  margin-top: 40px;
+  background-image: url(/es/img/about_main_img.jpg);
+}
+
+/*main-section2*/
+.about-values {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 100px;
+}
+
+.values-wrap {
+  width: 40%;
+}
+.values-wrap div:first-child {
+  margin-bottom: 100px;
+}
+.values-wrap .subheading {
+  margin-top: 0px;
+}
+
+.values-img {
+  width: 50%;
+  height: 500px;
+  background-size: cover;
+}
+
+.first-image {
+  background-image: url(/es/img/about_img2.jpg);
+}
+
+.second-image {
+  background-image: url(/es/img/about_img3.jpg);
+}
+
+.subheading {
+  color: #6b6150;
+}
+
+/*main-section3*/
+.about-values2 {
+  width: 67%;
+  line-height: 200%;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 120px;
+}
+
+/*진행절차*/
+.about-process {
+  margin-top: 120px;
+  margin-bottom: 120px;
+}
+.about-process img {
+  width: 100%;
+}
+.about-process .filter {
+  filter: grayscale(40%);
+}
+
+.process-wrap {
+  display: flex;
+  justify-content: space-between;
+}
+.process-wrap div {
+  width: 23%;
+}
+
+/*footer*/
+footer {
+  background-color: #1e1913;
+  width: 100%;
+  height: 300px;
+  color: #edece9;
+  display: flex;
+  font-size: 13px;
+}
+
+.footer-logo {
+  flex-grow: 1;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+.footer-logo img {
+  width: 50px;
+  margin-bottom: 90px;
+}
+
+.footer-left,
+.footer-right {
+  margin-right: 80px;
+  margin-top: 80px;
+}
+
+.footer-left p:first-child {
+  font-weight: 700;
+  padding-bottom: 30px;
+  margin: 0px;
+}
+
+.footer-right {
+  margin-top: 125px;
+}/*# sourceMappingURL=about.css.map */
