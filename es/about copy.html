@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="title" content="이에스 인테리어" />
+    <meta
+      name="description"
+      content="내게 딱 맞는 공간, 20년 경력의 이에스 인테리어가 설계해드립니다. 주거 시설, 상업 시설, 숙박 업소 등 맞춤형 인테리어 솔루션을 제공합니다. 1년간 a/s 보장해드립니다. 지금 바로 무료로 견적을 받으세요."
+    />
+    <meta
+      name="keywords"
+      content="수원 인테리어, 동탄 인테리어, 광교 인테리어, 상가 인테리어, 모텔 인테리어, 인테리어"
+    />
+    <title>이에스 인테리어</title>
+    <link rel="stylesheet" href="/es/layout.css" />
+  </head>
+  <body>
+    <nav id="navbar"></nav>
+    <main></main>
+    <footer id="footer"></footer>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      $(function () {
+        $("nav").load("navbar.html"); // 외부 파일에서 네비게이션 바 불러오기
+        $("footer").load("footer.html"); // 외부 파일에서 푸터 불러오기
+      });
+    </script>
+  </body>
+</html>

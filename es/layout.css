@@ -1,0 +1,76 @@
+@font-face {
+    font-family: pretendard-semiBold;
+    src: url(../font/woff2/Pretendard-SemiBold.woff2);
+  }
+  @font-face {
+    font-family: pretendard-mideum;
+    src: url(../font/woff2/Pretendard-Medium.woff2);
+  }
+  
+body {
+  margin: 0px;
+  background-color: #edece9;
+  color: #1e1913;
+  font-family: pretendard-mideum;
+  position: relative;
+}
+/* main {
+  margin: 30px;
+} */
+/*네비바*/
+nav {
+  margin: 40px;
+  display: flex;
+  justify-content: space-between;
+  font-family: pretendard-mideum;
+  font-size: 13px;
+  margin-bottom: 30px;
+  border: 1px solid red;
+}
+nav a {
+  text-decoration: none;
+  color: #1e1913;
+}
+.about {
+  margin-right: 40px;
+}
+.nav-logo {
+  width: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  /* border: 1px solid salmon; */
+}
+/*footer*/
+footer {
+  background-color: #1e1913;
+  width: 100%;
+  height: 300px;
+  color: #edece9;
+  display: flex;
+  /* padding: 70px; */
+}
+.footer-logo {
+  flex-grow: 1;
+  margin-top: 70px;
+  margin-left: 70px;
+}
+.footer-logo img {
+  width: 80px;
+  margin-bottom: 90px;
+}
+.footer-left,
+.footer-right {
+  margin-right: 70px;
+  margin-top: 70px;
+}
+.footer-left p:first-child {
+  font-weight: 700;
+  padding-bottom: 30px;
+  margin: 0px;
+}
+.footer-right {
+  margin-top: 120px;
+}
