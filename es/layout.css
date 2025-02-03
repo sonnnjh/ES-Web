@@ -1,39 +1,54 @@
+@charset "UTF-8";
 @font-face {
-    font-family: pretendard-semiBold;
-    src: url(../font/woff2/Pretendard-SemiBold.woff2);
-  }
-  @font-face {
-    font-family: pretendard-mideum;
-    src: url(../font/woff2/Pretendard-Medium.woff2);
-  }
-  
+  font-family: pretendard-semiBold;
+  src: url(../font/woff2/Pretendard-SemiBold.woff2);
+}
+@font-face {
+  font-family: pretendard-mideum;
+  src: url(../font/woff2/Pretendard-Medium.woff2);
+}
 body {
   margin: 0px;
   background-color: #edece9;
   color: #1e1913;
   font-family: pretendard-mideum;
   position: relative;
+  width: 100%;
 }
-/* main {
-  margin: 30px;
-} */
+
+main {
+  margin: 90px;
+}
+main p {
+  line-height: 180%;
+}
+
+h4,
+h3 {
+  font-weight: 500;
+  text-align: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
 /*네비바*/
 nav {
-  margin: 40px;
+  margin: 50px;
   display: flex;
   justify-content: space-between;
   font-family: pretendard-mideum;
   font-size: 13px;
-  margin-bottom: 30px;
-  border: 1px solid red;
+  margin-bottom: 40px;
 }
 nav a {
   text-decoration: none;
   color: #1e1913;
 }
+
 .about {
   margin-right: 40px;
 }
+
 .nav-logo {
   width: 30px;
   position: absolute;
@@ -41,8 +56,16 @@ nav a {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-  /* border: 1px solid salmon; */
 }
+
+.center {
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /*footer*/
 footer {
   background-color: #1e1913;
@@ -50,27 +73,64 @@ footer {
   height: 300px;
   color: #edece9;
   display: flex;
-  /* padding: 70px; */
+  font-size: 13px;
 }
+
 .footer-logo {
   flex-grow: 1;
-  margin-top: 70px;
-  margin-left: 70px;
+  margin-top: 80px;
+  margin-left: 80px;
 }
 .footer-logo img {
-  width: 80px;
+  width: 50px;
   margin-bottom: 90px;
 }
+
 .footer-left,
 .footer-right {
-  margin-right: 70px;
-  margin-top: 70px;
+  margin-right: 80px;
+  margin-top: 80px;
 }
+
 .footer-left p:first-child {
   font-weight: 700;
   padding-bottom: 30px;
   margin: 0px;
 }
+
 .footer-right {
-  margin-top: 120px;
+  margin-top: 125px;
 }
+
+/*animation*/
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0.3;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-end: 30%;
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-50px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.move-right {
+  animation: move-right linear;
+  animation-timeline: view();
+  animation-range-end: 50%;
+}/*# sourceMappingURL=layout.css.map */

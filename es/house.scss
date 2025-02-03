@@ -1,69 +1,5 @@
-$main-color: #1e1913;
-$back-color: #edece9;
-$font-size: 13px;
-$background-margin: 40px;
-$h2-fontweight: 500;
+@use "layout";
 
-@font-face {
-  font-family: pretendard-semiBold;
-  src: url(../font/woff2/Pretendard-SemiBold.woff2);
-}
-@font-face {
-  font-family: pretendard-mideum;
-  src: url(../font/woff2/Pretendard-Medium.woff2);
-}
-body {
-  margin: 0px;
-  background-color: $back-color;
-  color: $main-color;
-  font-family: pretendard-mideum;
-  position: relative;
-}
-main {
-  // margin: ($background-margin + 50px);
-  margin: ($background-margin * 4);
-  p {
-    line-height: 180%;
-  }
-}
-h4,
-h3 {
-  font-weight: $h2-fontweight;
-  text-align: center;
-  margin-top: ($background-margin);
-  margin-bottom: ($background-margin);
-}
-/*navbar*/
-nav {
-  margin: ($background-margin + 10px);
-  display: flex;
-  justify-content: space-between;
-  font-family: pretendard-mideum;
-  font-size: $font-size;
-  margin-bottom: $background-margin;
-  a {
-    text-decoration: none;
-    color: $main-color;
-  }
-}
-.about {
-  margin-right: $background-margin;
-}
-.nav-logo {
-  width: 30px;
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
-.center {
-  text-align: center;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-}
 /*main*/
 .main-heading {
   h3 {
@@ -71,15 +7,15 @@ nav {
   }
 }
 .portfolio-choice {
-  margin-top: ($background-margin/2);
-  margin-bottom: ($background-margin * 3);
+  margin-top: (layout.$background-margin/2);
+  margin-bottom: (layout.$background-margin * 3);
   display: flex;
   justify-content: space-between;
   width: 180px;
   //   border: 1px solid salmon;
   a {
     text-decoration: none;
-    color: $main-color;
+    color: layout.$main-color;
   }
 
   p::after {
@@ -87,7 +23,7 @@ nav {
     display: block;
     width: 100%;
     height: 0px;
-    border-bottom: 1px $main-color solid;
+    border-bottom: 1px layout.$main-color solid;
     transition: all 0.3s;
     transform: scaleX(0);
   }
@@ -97,7 +33,7 @@ nav {
 }
 
 .portfolio-grid {
-  margin-top: ($background-margin * 2);
+  margin-top: (layout.$background-margin * 2);
   display: grid;
   //   grid-gap: ($background-margin * 2) ($background-margin);
   grid-template-columns: 0.5fr 1fr;
@@ -108,9 +44,7 @@ nav {
   video {
     width: 100%;
     height: 100%;
-  }
-  div {
-    // border: 1px solid seagreen;
+   
   }
 }
 .portfolio-grid-text {
@@ -136,9 +70,9 @@ nav {
 }
 
 .portfolio-grid-more {
-  margin-top: ($background-margin * 2);
+  margin-top: (layout.$background-margin * 2);
   display: grid;
-  grid-gap: ($background-margin * 2) ($background-margin);
+  grid-gap: (layout.$background-margin * 2) (layout.$background-margin);
   grid-template-columns: 1fr 1fr;
   justify-content: space-between;
   //   grid-template-rows: 400px;
@@ -154,35 +88,4 @@ nav {
 }
 .full-img {
   grid-column: 1/3;
-}
-/*footer*/
-footer {
-  background-color: $main-color;
-  width: 100%;
-  height: 300px;
-  color: $back-color;
-  display: flex;
-  font-size: 13px;
-}
-.footer-logo {
-  flex-grow: 1;
-  margin-top: ($background-margin * 2);
-  margin-left: ($background-margin * 2);
-  img {
-    width: 50px;
-    margin-bottom: ($background-margin + 50px);
-  }
-}
-.footer-left,
-.footer-right {
-  margin-right: ($background-margin * 2);
-  margin-top: ($background-margin * 2);
-}
-.footer-left p:first-child {
-  font-weight: 700;
-  padding-bottom: ($background-margin - 10px);
-  margin: 0px;
-}
-.footer-right {
-  margin-top: ($background-margin - 10px)+95px;
 }
