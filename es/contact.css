@@ -13,6 +13,7 @@ body {
   color: #1e1913;
   font-family: pretendard-mideum;
   position: relative;
+  width: 100%;
 }
 
 main {
@@ -65,6 +66,79 @@ nav a {
   margin-right: auto;
 }
 
+/*footer*/
+footer {
+  background-color: #1e1913;
+  width: 100%;
+  height: 300px;
+  color: #edece9;
+  display: flex;
+  font-size: 13px;
+}
+
+.footer-logo {
+  flex-grow: 1;
+  margin-top: 80px;
+  margin-left: 80px;
+}
+.footer-logo img {
+  width: 50px;
+  margin-bottom: 90px;
+}
+
+.footer-left,
+.footer-right {
+  margin-right: 80px;
+  margin-top: 80px;
+}
+
+.footer-left p:first-child {
+  font-weight: 700;
+  padding-bottom: 30px;
+  margin: 0px;
+}
+
+.footer-right {
+  margin-top: 125px;
+}
+
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0.3;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in linear;
+  animation-timeline: view();
+  animation-range-end: 30%;
+}
+
+.fade-in-text {
+  animation: fade-in linear;
+  animation-timeline: scroll(10px);
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-50px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.move-right {
+  animation: move-right linear;
+  animation-timeline: view();
+  animation-range-end: 50%;
+}
+
 /*main*/
 .contact-text {
   width: 50%;
@@ -115,40 +189,4 @@ button p {
 .contact-kakao {
   margin-top: 120px;
   margin-bottom: 120px;
-}
-
-/*footer*/
-footer {
-  background-color: #1e1913;
-  width: 100%;
-  height: 300px;
-  color: #edece9;
-  display: flex;
-  font-size: 13px;
-}
-
-.footer-logo {
-  flex-grow: 1;
-  margin-top: 80px;
-  margin-left: 80px;
-}
-.footer-logo img {
-  width: 50px;
-  margin-bottom: 90px;
-}
-
-.footer-left,
-.footer-right {
-  margin-right: 80px;
-  margin-top: 80px;
-}
-
-.footer-left p:first-child {
-  font-weight: 700;
-  padding-bottom: 30px;
-  margin: 0px;
-}
-
-.footer-right {
-  margin-top: 125px;
 }/*# sourceMappingURL=contact.css.map */

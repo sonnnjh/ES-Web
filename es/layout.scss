@@ -1,0 +1,136 @@
+$main-color: #1e1913;
+$back-color: #edece9;
+$font-size: 13px;
+$background-margin: 40px;
+$h2-fontweight: 500;
+
+@font-face {
+  font-family: pretendard-semiBold;
+  src: url(../font/woff2/Pretendard-SemiBold.woff2);
+}
+@font-face {
+  font-family: pretendard-mideum;
+  src: url(../font/woff2/Pretendard-Medium.woff2);
+}
+body {
+  margin: 0px;
+  background-color: $back-color;
+  color: $main-color;
+  font-family: pretendard-mideum;
+  position: relative;
+  width: 100%;
+}
+main {
+  margin: ($background-margin + 50px);
+  p {
+    line-height: 180%;
+  }
+}
+h4,
+h3 {
+  font-weight: $h2-fontweight;
+  text-align: center;
+  margin-top: ($background-margin);
+  margin-bottom: ($background-margin);
+}
+/*네비바*/
+nav {
+  margin: ($background-margin + 10px);
+  display: flex;
+  justify-content: space-between;
+  font-family: pretendard-mideum;
+  font-size: $font-size;
+  margin-bottom: $background-margin;
+  a {
+    text-decoration: none;
+    color: $main-color;
+  }
+}
+.about {
+  margin-right: $background-margin;
+}
+.nav-logo {
+  width: 30px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+.center {
+  text-align: center;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*footer*/
+footer {
+    background-color: $main-color;
+    width: 100%;
+    height: 300px;
+    color: $back-color;
+    display: flex;
+    font-size: 13px;
+  }
+  .footer-logo {
+    flex-grow: 1;
+    margin-top: ($background-margin*2);
+    margin-left: ($background-margin*2);
+    img {
+      width: 50px;
+      margin-bottom: ($background-margin + 50px);
+    }
+  }
+  .footer-left,
+  .footer-right {
+    margin-right: ($background-margin*2);
+    margin-top: ($background-margin*2);
+  }
+  .footer-left p:first-child {
+    font-weight: 700;
+    padding-bottom: ($background-margin - 10px);
+    margin: 0px;
+  }
+  .footer-right {
+    margin-top: ($background-margin - 10px)+95px;
+  }
+/*animation*/
+  @keyframes fade-in {
+    from {
+      scale: 0.8;
+      opacity: 0.3;
+    }
+    to {
+      scale: 1;
+      opacity: 1;
+    }
+  }
+  .fade-in {
+    animation: fade-in linear;
+    // animation-timeline: view(90% 0%);
+    animation-timeline: view();
+    animation-range-end: 30%;
+  }
+
+  @keyframes move-right {
+    from {
+      transform: translateX(-50px);
+      opacity: 0.3;
+    }
+    to {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  .move-right {
+    animation: move-right linear;
+    animation-timeline: view();
+    animation-range-end: 50%;
+  }
+  
+  @media screen and (max-width: 768px) {
+    
+  }
+  @media screen and (max-width: 576px) {
+  }
