@@ -186,6 +186,9 @@ footer {
 }
 
 @media screen and (max-width: 576px) {
+  body {
+    font-size: 10px;
+  }
   main {
     margin: 20px;
   }
@@ -194,10 +197,43 @@ footer {
     margin: 20px;
     margin-bottom: $background-margin;
   }
-  .footer-logo {
-    img {
-      width: 30px;
-      margin-bottom: 30%;
+  h4,
+  h3 {
+    font-weight: $h2-fontweight;
+    font-size: 12px;
+  }
+  .about {
+    margin-right: 10px;
+  }
+  .nav-logo {
+    width: 20px;
+  }
+
+  footer {
+    height: 10%;
+    p {
+      font-size: 8px;
     }
+  }
+  .footer-logo {
+    flex-grow: 1;
+    margin-top: 5%;
+    margin-left: 5%;
+    img {
+      width: 20px;
+      margin-bottom: 5%;
+    }
+  }
+  .footer-left,
+  .footer-right {
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .footer-left p:first-child {
+    padding-bottom: 5%;
+  }
+  .footer-right {
+    margin-top: 9%;
   }
 }
