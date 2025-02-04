@@ -102,6 +102,7 @@ footer {
   margin-top: 125px;
 }
 
+/*animation*/
 @keyframes fade-in {
   from {
     scale: 0.8;
@@ -116,11 +117,6 @@ footer {
   animation: fade-in linear;
   animation-timeline: view();
   animation-range-end: 30%;
-}
-
-.fade-in-text {
-  animation: fade-in linear;
-  animation-timeline: scroll(10px);
 }
 
 @keyframes move-right {
@@ -139,15 +135,83 @@ footer {
   animation-range-end: 50%;
 }
 
+@media screen and (max-width: 1200px) {
+  main {
+    margin: 40px;
+  }
+  h4,
+  h3 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+.choice-img h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom: 40px;
+  }
+  footer {
+    height: 10%;
+  }
+  footer p {
+    font-size: 10px;
+  }
+  .footer-logo {
+    flex-grow: 1;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .footer-logo img {
+    width: 40px;
+    margin-bottom: 15%;
+  }
+  .footer-left,
+  .footer-right {
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .footer-left p:first-child {
+    padding-bottom: 5%;
+  }
+  .footer-right {
+    margin-top: 9%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom: 40px;
+  }
+  .footer-logo img {
+    width: 30px;
+    margin-bottom: 30%;
+  }
+}
 /*세션1*/
 .main-img img {
   width: 100%;
 }
 
 /*세션2*/
-.main-portfolio h2,
-.main-choice h2 {
-  font-weight: 400;
+.main-portfolio h3,
+.main-choice h3 {
+  font-weight: 500;
   text-align: center;
   margin-top: 60px;
 }
@@ -164,45 +228,41 @@ footer {
 
 /*세션3*/
 .main-sticky {
-  height: 900px;
+  height: 780px;
   /* background-color: white; */
   margin-top: 150px;
 }
 
 .sticky-text {
-  padding-left: 150px;
+  padding-left: 5%;
   width: 37%;
   float: left;
   /* border: 1px solid salmon; */
 }
-
 .sticky-text h3 {
-  width: 200px;
+  width: 50%;
   font-weight: 500;
   color: #6b6150;
-  /* border: 1px solid salmon; */
+  margin-top: 0;
 }
-
 .sticky-text p {
   line-height: 200%;
-  width: 330px;
+  width: 60%;
+  margin-top: 0;
 }
-
 .sticky-text div {
   display: flex;
 }
-
 .sticky-text div:not(:last-of-type) {
-  padding-bottom: 200px;
+  padding-bottom: 30%;
 }
 
 .sticky-img {
   position: sticky;
   top: 30px;
   float: right;
-  width: 50%;
+  width: 48%;
 }
-
 .sticky-img img {
   width: 100%;
 }
@@ -258,4 +318,59 @@ footer {
 
 .house {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/es/img/home_img7.jpg);
+}
+
+@media screen and (max-width: 992px) {
+  .main-sticky {
+    height: 900px;
+    display: block;
+    margin-top: 80px;
+  }
+  .sticky-text {
+    padding-left: 0;
+    width: 100%;
+  }
+  .sticky-text div:not(:last-of-type) {
+    padding-bottom: 5%;
+  }
+  .sticky-text h3 {
+    width: 30%;
+  }
+  .sticky-text p {
+    width: 65%;
+  }
+  .sticky-text .portfolio-img {
+    margin-top: 0;
+  }
+  .sticky-img {
+    width: 100%;
+    margin-top: 40px;
+  }
+  .main-choice {
+    margin-top: 0px;
+  }
+  .office,
+  .house {
+    height: 300px;
+  }
+  .office h3,
+  .house h3 {
+    font-size: 18px;
+    text-align: center;
+    padding-top: 15%;
+  }
+  .choice-img {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  .choice-img h3:hover {
+    font-size: 23px;
+    transition-duration: 0.5s;
+  }
+}
+@media screen and (max-width: 576px) {
+  .main-sticky {
+    height: 650px;
+    margin-top: 40px;
+  }
 }/*# sourceMappingURL=home2.css.map */

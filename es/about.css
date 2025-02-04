@@ -102,6 +102,7 @@ footer {
   margin-top: 125px;
 }
 
+/*animation*/
 @keyframes fade-in {
   from {
     scale: 0.8;
@@ -116,11 +117,6 @@ footer {
   animation: fade-in linear;
   animation-timeline: view();
   animation-range-end: 30%;
-}
-
-.fade-in-text {
-  animation: fade-in linear;
-  animation-timeline: scroll(10px);
 }
 
 @keyframes move-right {
@@ -139,6 +135,74 @@ footer {
   animation-range-end: 50%;
 }
 
+@media screen and (max-width: 1200px) {
+  main {
+    margin: 40px;
+  }
+  h4,
+  h3 {
+    font-size: 15px;
+  }
+  p {
+    font-size: 13px;
+  }
+}
+.choice-img h3 {
+  font-size: 18px;
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 992px) {
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom: 40px;
+  }
+  footer {
+    height: 10%;
+  }
+  footer p {
+    font-size: 10px;
+  }
+  .footer-logo {
+    flex-grow: 1;
+    margin-top: 5%;
+    margin-left: 5%;
+  }
+  .footer-logo img {
+    width: 40px;
+    margin-bottom: 15%;
+  }
+  .footer-left,
+  .footer-right {
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
+  }
+  .footer-left p:first-child {
+    padding-bottom: 5%;
+  }
+  .footer-right {
+    margin-top: 9%;
+  }
+}
+@media screen and (max-width: 576px) {
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom: 40px;
+  }
+  .footer-logo img {
+    width: 30px;
+    margin-bottom: 30%;
+  }
+}
 /*main-section1*/
 .about-main img {
   width: 100%;
@@ -164,12 +228,6 @@ footer {
 }
 .values-wrap .subheading {
   margin-top: 0px;
-}
-
-.values-img {
-  width: 50%;
-  height: 500px;
-  background-size: cover;
 }
 
 .subheading {
@@ -201,8 +259,42 @@ footer {
 
 .process-wrap {
   display: flex;
+  flex-flow: row wrap;
   justify-content: space-between;
 }
 .process-wrap div {
   width: 23%;
+}
+
+@media screen and (max-width: 768px) {
+  .process-wrap div {
+    width: 48%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .about-values {
+    display: block;
+    justify-content: center;
+    margin-top: 100px;
+  }
+  .about-values img {
+    width: 100%;
+    height: 300px;
+  }
+  .values-wrap {
+    width: 100%;
+    margin-top: 30px;
+  }
+  .values-wrap div:first-child {
+    margin-bottom: 20px;
+  }
+  .values-wrap .subheading {
+    margin-top: 0px;
+  }
+  .about-values2 {
+    width: 80%;
+  }
+  .about-values2 h3 {
+    font-size: 13px;
+  }
 }/*# sourceMappingURL=about.css.map */

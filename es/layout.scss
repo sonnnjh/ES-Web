@@ -66,71 +66,139 @@ nav {
 }
 /*footer*/
 footer {
-    background-color: $main-color;
-    width: 100%;
-    height: 300px;
-    color: $back-color;
-    display: flex;
+  background-color: $main-color;
+  width: 100%;
+  height: 300px;
+  color: $back-color;
+  display: flex;
+  font-size: 13px;
+}
+.footer-logo {
+  flex-grow: 1;
+  margin-top: ($background-margin * 2);
+  margin-left: ($background-margin * 2);
+  img {
+    width: 50px;
+    margin-bottom: ($background-margin + 50px);
+  }
+}
+.footer-left,
+.footer-right {
+  margin-right: ($background-margin * 2);
+  margin-top: ($background-margin * 2);
+}
+.footer-left p:first-child {
+  font-weight: 700;
+  padding-bottom: ($background-margin - 10px);
+  margin: 0px;
+}
+.footer-right {
+  margin-top: ($background-margin - 10px)+95px;
+}
+/*animation*/
+@keyframes fade-in {
+  from {
+    scale: 0.8;
+    opacity: 0.3;
+  }
+  to {
+    scale: 1;
+    opacity: 1;
+  }
+}
+.fade-in {
+  animation: fade-in linear;
+  // animation-timeline: view(90% 0%);
+  animation-timeline: view();
+  animation-range-end: 30%;
+}
+
+@keyframes move-right {
+  from {
+    transform: translateX(-50px);
+    opacity: 0.3;
+  }
+  to {
+    transform: translateX(0px);
+    opacity: 1;
+  }
+}
+.move-right {
+  animation: move-right linear;
+  animation-timeline: view();
+  animation-range-end: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+  main {
+    margin: ($background-margin);
+  }
+  h4,
+  h3 {
+    font-size: 15px;
+  }
+  p {
     font-size: 13px;
+  }
+}
+.choice-img {
+  h3 {
+    font-size: 18px;
+    margin-bottom: 0;
+  }
+}
+@media screen and (max-width: 992px) {
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom: $background-margin;
+  }
+  footer {
+    height: 10%;
+    p {
+      font-size: 10px;
+    }
   }
   .footer-logo {
     flex-grow: 1;
-    margin-top: ($background-margin*2);
-    margin-left: ($background-margin*2);
+    margin-top: 5%;
+    margin-left: 5%;
     img {
-      width: 50px;
-      margin-bottom: ($background-margin + 50px);
+      width: 40px;
+      margin-bottom: 15%;
     }
   }
   .footer-left,
   .footer-right {
-    margin-right: ($background-margin*2);
-    margin-top: ($background-margin*2);
+    margin-right: 5%;
+    margin-top: 5%;
+    margin-bottom: 2%;
   }
   .footer-left p:first-child {
-    font-weight: 700;
-    padding-bottom: ($background-margin - 10px);
-    margin: 0px;
+    padding-bottom: 5%;
   }
   .footer-right {
-    margin-top: ($background-margin - 10px)+95px;
+    margin-top: 9%;
   }
-/*animation*/
-  @keyframes fade-in {
-    from {
-      scale: 0.8;
-      opacity: 0.3;
-    }
-    to {
-      scale: 1;
-      opacity: 1;
-    }
-  }
-  .fade-in {
-    animation: fade-in linear;
-    // animation-timeline: view(90% 0%);
-    animation-timeline: view();
-    animation-range-end: 30%;
-  }
+}
 
-  @keyframes move-right {
-    from {
-      transform: translateX(-50px);
-      opacity: 0.3;
+@media screen and (max-width: 576px) {
+
+  main {
+    margin: 20px;
+  }
+  nav {
+    font-size: 10px;
+    margin: 20px;
+    margin-bottom:$background-margin;
+  }
+  .footer-logo {
+    img {
+      width: 30px;
+      margin-bottom: 30%;
     }
-    to {
-      transform: translateX(0px);
-      opacity: 1;
-    }
   }
-  .move-right {
-    animation: move-right linear;
-    animation-timeline: view();
-    animation-range-end: 50%;
-  }
-  
-  @media screen and (max-width: 768px) {
-    
-  }
-  @media screen and (max-width: 576px) {
-  }
+}
