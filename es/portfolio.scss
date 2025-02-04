@@ -17,8 +17,7 @@
     text-decoration: none;
     color: layout.$main-color;
   }
-  p {
-  }
+
   p::after {
     content: "";
     display: block;
@@ -39,16 +38,18 @@
   grid-gap: (layout.$background-margin * 2) (layout.$background-margin);
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 400px 400px 400px 400px;
+
+  div {
+    overflow: hidden;
+    margin-bottom: 0px;
+  }
   img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-
     transform: scale(1);
     transition-duration: 0.2s;
-  }
-  div {
-    overflow: hidden;
+    object-fit: cover;
+    margin-bottom: 0px;
   }
   img:hover {
     transform: scale(1.1);
@@ -87,26 +88,29 @@
   }
 }
 
-
 @media screen and (max-width: 992px) {
   .portfolio-grid {
     grid-gap: (layout.$background-margin) (layout.$background-margin);
-    grid-template-rows: 300px 300px 300px 300px;}
-    .portfolio-grid-text {
-      margin-left: 20px;}
+    grid-template-rows: 300px 300px 300px 300px;
+  }
+  .portfolio-grid-text {
+    margin-left: 20px;
+  }
 }
 
 @media screen and (max-width: 768px) {
   .portfolio-grid {
-    display: block;
-    img{
-      margin-bottom: 10px;
-    }
+    margin-top: (layout.$background-margin);
+    margin-bottom: (layout.$background-margin);
+    grid-template-columns: 1fr;
+    grid-template-rows: 350px;
+  }
+  .portfolio-choice {
+    margin-top: (layout.$background-margin);
+    margin-bottom: (layout.$background-margin);
   }
   .portfolio-grid-text {
     height: 250px;
-    margin-top: layout.$background-margin;
-    margin-bottom: layout.$background-margin;
   }
   .portfolio-grid-head p:first-child {
     font-size: 15px;
