@@ -12,7 +12,7 @@
       name="keywords"
       content="수원 인테리어, 동탄 인테리어, 광교 인테리어, 상가 인테리어, 모텔 인테리어, 인테리어"
     />
-    <title>이에스 인테리어 견적문의</title>
+    <title>이에스 인테리어</title>
     <link rel="stylesheet" href="about.css" />
   </head>
   <body>
@@ -34,48 +34,66 @@
     </nav>
 
     <main>
-      <section class="contact-main">
-        <h3>CONTACT</h3>
-      </section>
-      <section class="contact-text center ">
-        <p >더 많은 정보나 시공을 원하시면 언제든지 연락 주십시오.<br>
-          최선을 다해 도와드리겠습니다.</p>
+      <section class="main-img">
+        <img src="/img/home_img1.jpg" alt="main-image">
+        <!-- <div class="main-img"></div> -->
       </section>
 
-      <section class="contact-form center">
-        <form action="/contact" method="get">
-          <div class="form-wrap">
-            <div class="form">
-              <p>이름</p><input type="text">
-            </div>
-            <div class="form">
-              <p>주소</p><input type="text">
-            </div>
-          </div>
-          <div class="form-wrap">
-            <div class="form">
-              <p>전화</p><input type="text">
-            </div>
-            <div class="form">
-              <p>예산</p><input type="text">
-            </div>
-          </div>
-          <div class="form-wrap">
-            <div class="form">
-              <p>문의내용</p><input type="text" class="long-text">
-            </div>
-          </div>
-        </form>
-        <button type="submit" id="form-submit">
-          <p>문의하기</p>
-        </button>
+      <section class="main-portfolio">
+        <h3>PORTFOLIO</h3>
+        <div class="portfolio-img fade-in" >
+          <img src="/img/home_img3.jpg" alt="포트폴리오 이미지1" />
+          <img src="/img/home_img4.jpg" alt="포트폴리오 이미지2" />
+          <img src="/img/home_img5.jpg" alt="포트폴리오 이미지3" />
+        </div>
       </section>
 
-      <section class="contact-kakao center">
-        <p class=" move-right">카카오톡으로 문의하기</p>
-        <button>
-          <p>문의하기</p>
-        </button>
+      <section>
+        <div class="main-sticky">
+          <div class="sticky-text move-right">
+            <div>
+              <h3>Space Design</h3>
+              <p>
+                주거와 상업 공간을 아우르는 맞춤형 디자인! <br />
+                고객의 라이프 스타일과 비즈니스 목표에 맞춰 새로운 가치를
+                더합니다.
+              </p>
+            </div>
+            <div>
+              <h3>Space Planning</h3>
+              <p>
+                효율적이고 창의적인 공간 기획! <br />
+                업종과 공간 구조에 최적화된 기획을 통해 고객과 직원 모두에게
+                편안하고 효과적인 환경을 제안합니다.
+              </p>
+            </div>
+            <div>
+              <h3>Build & Care</h3>
+              <p>
+                완벽 시공과 철저한 사후 관리! <br />
+                직영 공사로 높은 품질의 시공을 보장하며, 1년간 A/S 서비스를
+                제공하여 완벽한 만족을 약속드립니다.
+              </p>
+            </div>
+          </div>
+          <div class="sticky-img fade-in">
+            <img src="/img/home_img2.jpg" alt="home-scroll-image" />
+          </div>
+        </div>
+      </section>
+
+      <section class="main-choice">
+        <h3>OFFICE - HOUSE</h3>
+        <div class="choice-img">
+          <div class="office">
+            <a href="portfolio-office.html"><h3>상업 공간</h3></a>
+            <a href="portfolio-office.html"><p>더보기</p></a>
+          </div>
+          <div class="house">
+            <a href="portfolio-house.html"><h3>주거 공간</h3></a>
+            <a href="portfolio-house.html"><p>더보기</p></a>
+          </div>
+        </div>
       </section>
     </main>
 
@@ -131,9 +149,6 @@
         }
       );
 
-      $("#form-submit").on('click',function(){
-        
-      })
     </script>
   </body>
 </html>
