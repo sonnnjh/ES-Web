@@ -7,7 +7,7 @@
   }
 }
 .portfolio-choice {
-  margin-top: (layout.$background-margin/2);
+  margin-top: 20px;
   margin-bottom: (layout.$background-margin * 3);
   display: flex;
   justify-content: space-between;
@@ -34,17 +34,15 @@
 
 .portfolio-grid {
   margin-top: (layout.$background-margin * 2);
+  margin-bottom: (layout.$background-margin * 2);
   display: grid;
   //   grid-gap: ($background-margin * 2) ($background-margin);
   grid-template-columns: 0.5fr 1fr;
   justify-content: space-between;
-  //   grid-template-rows: 400px;
-  //   border: 1px solid salmon;
   img,
   video {
     width: 100%;
     height: 100%;
-   
   }
 }
 .portfolio-grid-text {
@@ -71,6 +69,7 @@
 
 .portfolio-grid-more {
   margin-top: (layout.$background-margin * 2);
+  margin-bottom: (layout.$background-margin * 2);
   display: grid;
   grid-gap: (layout.$background-margin * 2) (layout.$background-margin);
   grid-template-columns: 1fr 1fr;

@@ -49,3 +49,44 @@ button {
   margin-top: (layout.$background-margin * 3);
   margin-bottom: (layout.$background-margin * 3);
 }
+
+@media screen and (max-width: 992px) {
+  button {
+    width: 250px;
+    height: 40px;
+    p {
+      font-size: 15px;
+      margin: 0%;
+    }
+  }
+}
+  
+
+@media screen and (max-width: 576px) {
+  button {
+    width: 200px;
+    height: 30px;
+    p {
+      font-size: 13px;
+      margin: 0%;
+    }
+  }
+  .contact-kakao {
+    margin-top: (layout.$background-margin);
+    margin-bottom: (layout.$background-margin);
+  }
+  .form-wrap {
+    
+    input {
+      width: 100%;
+      height: 20px;
+    }
+
+    .long-text {
+      height: 80px;
+    }
+    .form {
+      margin: 6px;
+    }
+}
+}

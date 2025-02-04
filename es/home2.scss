@@ -9,14 +9,14 @@
 }
 
 /*세션2*/
-.main-portfolio h2,
-.main-choice h2 {
-  font-weight: 400;
+.main-portfolio h3,
+.main-choice h3 {
+  font-weight: layout.$h2-fontweight;
   text-align: center;
-  margin-top: 60px;
+  margin-top: (layout.$background-margin + 20px);
 }
 .portfolio-img {
-  margin-top: 60px;
+  margin-top: (layout.$background-margin + 20px);
   display: flex;
   justify-content: space-between;
 }
@@ -25,40 +25,41 @@
 }
 /*세션3*/
 .main-sticky {
-  height: 900px;
+  height: 780px;
   /* background-color: white; */
   margin-top: 150px;
 }
 .sticky-text {
-  padding-left: 150px;
+  padding-left: 5%;
   width: 37%;
   float: left;
   /* border: 1px solid salmon; */
-}
-.sticky-text h3 {
-  width: 200px;
-  font-weight: 500;
-  color: #6b6150;
-  /* border: 1px solid salmon; */
-}
-.sticky-text p {
-  line-height: 200%;
-  width: 330px;
-}
-.sticky-text div {
-  display: flex;
-}
-.sticky-text div:not(:last-of-type) {
-  padding-bottom: 200px;
+  h3 {
+    width: 50%;
+    font-weight: layout.$h2-fontweight;
+    color: #6b6150;
+    margin-top: 0;
+  }
+  p {
+    line-height: 200%;
+    width: 60%;
+    margin-top: 0;
+  }
+  div {
+    display: flex;
+  }
+  div:not(:last-of-type) {
+    padding-bottom: 30%;
+  }
 }
 .sticky-img {
   position: sticky;
   top: 30px;
   float: right;
-  width: 50%;
-}
-.sticky-img img {
-  width: 100%;
+  width: 48%;
+  img {
+    width: 100%;
+  }
 }
 /*세션4*/
 .main-choice {
@@ -75,13 +76,13 @@
   width: 48%;
   height: 600px;
   background-size: cover;
-  color: #edece9;
+  color: layout.$back-color;
 }
 .office a,
 .house a {
   text-align: center;
   margin-top: 300px;
-  color: #edece9;
+  color: layout.$back-color;
 }
 .office a:first-child,
 .house a:first-child {
@@ -92,7 +93,7 @@
   text-align: center;
   padding-top: 250px;
   font-size: 30px;
-  font-weight: 500;
+  font-weight: layout.$h2-fontweight;
 }
 .choice-img h3:hover {
   font-size: 35px;
@@ -105,4 +106,64 @@
 .house {
   background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
     url(/es/img/home_img7.jpg);
+}
+
+
+@media screen and (max-width: 992px) {
+  .main-sticky {
+    height: 900px;
+    display: block;
+    margin-top: (layout.$background-margin * 2);
+  }
+  .sticky-text {
+    padding-left: 0;
+    width: 100%;
+    div:not(:last-of-type) {
+      padding-bottom: 5%;
+    }
+    h3 {
+      width: 30%;
+    }
+    p {
+      width: 65%;
+    }
+    .portfolio-img {
+      margin-top: 0;
+    }
+  }
+  .sticky-img {
+    // position: none;
+    width: 100%;
+    margin-top: layout.$background-margin;
+  }
+  .main-choice {
+    margin-top: 0px;
+  }
+
+  .office,
+  .house {
+    height: 300px;
+
+    h3 {
+      font-size: 18px;
+      text-align: center;
+      padding-top: 15%;
+    }
+  }
+  .choice-img {
+    margin-top: layout.$background-margin;
+    margin-bottom: layout.$background-margin;
+  }
+  .choice-img h3:hover {
+    font-size: 23px;
+    transition-duration: 0.5s;
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  .main-sticky {
+    height: 650px;
+    margin-top: layout.$background-margin;
+  }
 }
